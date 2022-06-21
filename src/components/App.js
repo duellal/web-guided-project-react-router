@@ -51,6 +51,12 @@ export default function App(props) {
         <Route path="/">
           <Home />
         </Route>
+        {/* <Route path="/items-list" render={() => {
+          return <ItemsList items={stock} />
+        }} />
+        <Route path={"/items-list/:itemID"} render={props => {
+          <Item items={stock} match={props.match} location={props.location} />
+        }} /> */}
       </Switch>
     </div>
   )
