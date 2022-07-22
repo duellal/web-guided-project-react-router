@@ -28,18 +28,25 @@ export default function App(props) {
         <h1 className='store-header'>Emily&apos;s Trinkets</h1>
         <div className='nav-links'>
           {/* 👉 STEP 3 - Make Links to navigate us Home (`/`) and Shop (`/items-list`) */}
-
-          <Link exact to={'/'}>
+          <Link to='/'>
             Home
           </Link>
 
-          <Link to={'/items-list'}>
+          <Link to='/items-list'>
             Shop
           </Link>
         </div>
       </nav>
 
       {/* 👉 STEP 4 - Build a Switch with a Route for each of the components imported at the top */}
+      <Switch>
+        <Route path='/items-list'>
+          <ItemsList items={stock} />
+        </Route>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+      </Switch>
     </div>
   )
 }
