@@ -8,9 +8,12 @@ import App from './components/App'
 import './styles.less'
 
 // 👉 STEP 1 - Import React Router's Router
+import { BrowserRouter } from 'react-router-dom'
 
 render(
   // Wrap the <App /> in a provider
-  <App />
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
   , document.querySelector('#root')
 )
